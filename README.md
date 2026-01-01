@@ -15,7 +15,7 @@ ValoNotifier is a lightweight, open-source tool that sends **Discord notificatio
 1.  Download `ValoNotifier_v1.0.zip` from the **[Releases Page](../../releases)**.
 2.  **Right-click** the zip file and select **"Extract All..."**.
 3.  Open the folder and run `ValoNotifier.exe`.
-4.  Paste your Discord Webhook URL when asked. * *Don't know how to get a Webhook?* **[Click here for a 1-minute guide.](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)**
+4.  Paste your Discord Webhook URL when asked. **Don't know how to get a Webhook?* **[Click here for a 1-minute guide.](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)**
 5.  Minimize the window and go AFK!
 
 ## ☕ Support
@@ -27,3 +27,4 @@ If this tool helped you, consider buying me a coffee!
 **Author:** Developed by 37xWy with assistance from AI.
 
 *Built with Python and the Riot Client API.*
+
