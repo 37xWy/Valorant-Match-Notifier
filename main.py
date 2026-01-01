@@ -4,7 +4,7 @@ Valorant Match Notifier
 A lightweight utility that monitors the local Riot Client API to detect
 Valorant queue states and sends Discord notifications via Webhook.
 
-Author: [Your Name/GitHub Username]
+Author: 37xWy
 License: MIT
 """
 
@@ -239,4 +239,5 @@ def main():
         except: time.sleep(POLL_INTERVAL)
 
 if __name__ == "__main__":
+
     main()
