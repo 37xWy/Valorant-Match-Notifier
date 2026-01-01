@@ -6,7 +6,7 @@ ValoNotifier is a lightweight, open-source tool that sends **Discord notificatio
 
 ## ✨ Features
 * **Queue Detection:** Instant alerts for all modes (Unrated, Competitive, Swiftplay, TDM, etc.).
-* **Map Preview:** See the map name **before** you load in (useful for strategic dodges).
+* **Map Preview:** See the map name while away (useful for strategic dodges).
 * **Live Mobility:** Get pinged on your phone via the Discord app.
 * **Lock-In Timer:** A live countdown showing an estimated minimum of how much time you have left to pick an agent.
 * **Safe & Local:** Runs entirely on your PC using the Riot Local Client API. No passwords or external API keys required.
@@ -27,4 +27,5 @@ If this tool helped you, consider buying me a coffee!
 **Author:** Developed by 37xWy with assistance from AI.
 
 *Built with Python and the Riot Client API.*
+
 
