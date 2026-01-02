@@ -23,9 +23,17 @@ If this tool helped you, consider buying me a coffee!
 
 <a href="https://www.buymeacoffee.com/37xwy" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
+## ⚠️ Disclaimer
+**ValoNotifier** is an unofficial, open-source community tool and is not endorsed by or affiliated with Riot Games.
+
+* This software is intended for personal use only.
+* This tool is **Read-Only**: It does not modify game files, memory, or send active inputs to the game client.
+* **Use at your own risk.** The developer is not responsible for any penalties, account suspensions, or bans that may occur from using this software.
+
 ## 📜 Credits
 **Author:** Developed by 37xWy with assistance from AI.
 
 *Built with Python and the Riot Client API.*
+
 
 
