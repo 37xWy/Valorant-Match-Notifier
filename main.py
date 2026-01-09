@@ -4,7 +4,7 @@ Valorant Match Notifier
 A lightweight utility that monitors the local Riot Client API to detect
 Valorant queue states and sends Discord notifications via Webhook.
 
-Author: 37xWy
+Author: [Your Name/GitHub Username]
 License: MIT
 """
 
@@ -60,7 +60,8 @@ QUEUE_NAMES = {
     "swiftplay": "Swiftplay",
     "ggteam": "Escalation",
     "onefa": "Replication",
-    "snowball": "Snowball Fight"
+    "snowball": "Snowball Fight",
+    "valaram": "AR1S (All Random One Site)"
 }
 
 def load_or_create_config():
@@ -220,10 +221,20 @@ def main():
                 future_time = int(time.time() + 80)
                 send_notification(webhook_url, f"🚨 **MATCH FOUND!**\n🗺️ Map: **{map_label}**\n⏳ Lock in <t:{future_time}:R>!")
 
-            # 4. Match Started (Instant)
+            # 4. Match Started (Instant / In-Game)
             elif loop_state == "INGAME" and last_loop_state != "INGAME":
-                 print(f"\n[Event] Match Started: {current_map}")
-                 send_notification(webhook_url, f"✅ **Match Started!**\n🗺️ Map: **{current_map}**\n*Glhf!*")
+                retries = 0
+                while not current_map and retries < 10:
+                    time.sleep(1)
+                    new_decoded = fetch_presence_data(session, creds, my_puuid)
+                    if new_decoded:
+                        current_map = resolve_map_name(new_decoded)
+                    retries += 1
+                
+                map_display = current_map if current_map else "Unknown Map"
+                print(f"\n[Event] Match Started: {map_display}")
+                
+                send_notification(webhook_url, f"✅ **Match Started!**\n🗺️ Map: **{map_display}**\n*Glhf!*")
 
             # 5. Returned to Menus
             elif loop_state == "MENUS" and last_loop_state == "INGAME":
@@ -239,5 +250,4 @@ def main():
         except: time.sleep(POLL_INTERVAL)
 
 if __name__ == "__main__":
-
     main()
